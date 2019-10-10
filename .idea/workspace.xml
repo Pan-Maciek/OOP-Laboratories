@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99d33c9c-94f3-43cb-9e65-1625c78a675e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agh/cs/lab2/MapDirection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agh/cs/lab2/MoveDirection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agh/cs/lab2/Vector2d.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agh/cs/lab2/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/labs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab2/MapDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab2/MapDirection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab2/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab2/World.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +23,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="ProjectId" id="1S0Uv65euUWTnOHdneLGUDjPQJg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -204,6 +203,14 @@
       <option name="presentableId" value="Default" />
       <updated>1570134960192</updated>
     </task>
+    <task id="LOCAL-00001" summary="Implemented Lab2 exercises.">
+      <created>1570703854961</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570703854961</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,6 +225,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implemented Lab2 exercises." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented Lab2 exercises." />
   </component>
   <component name="masterDetails">
     <states>
