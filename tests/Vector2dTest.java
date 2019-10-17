@@ -10,8 +10,8 @@ class Vector2dTest {
 
     @BeforeEach
     void setup() {
-        this.vecA = new Vector2d(5, 2);
-        this.vecB = new Vector2d(-2, 5);
+        this.vecA = new Vector2d(1, 2);
+        this.vecB = new Vector2d(-2, 1);
     }
 
     @Test
@@ -32,7 +32,7 @@ class Vector2dTest {
 
     @Test
     void upperRight() {
-        final Vector2d expected  = new Vector2d(5, 2);
+        final Vector2d expected  = new Vector2d(1, 2);
         final Vector2d actual = vecA.upperRight(vecB);
 
         assertEquals(expected, actual);
@@ -40,7 +40,7 @@ class Vector2dTest {
 
     @Test
     void lowerLeft() {
-        final Vector2d expected  = new Vector2d(-2, 5);
+        final Vector2d expected  = new Vector2d(-2, 1);
         final Vector2d actual = vecA.lowerLeft(vecB);
 
         assertEquals(expected, actual);
@@ -48,7 +48,7 @@ class Vector2dTest {
 
     @Test
     void add() {
-        final Vector2d expected  = new Vector2d(-5, 3);
+        final Vector2d expected  = new Vector2d(-1, 3);
         final Vector2d actual = vecA.add(vecB);
 
         assertEquals(expected, actual);
@@ -56,7 +56,7 @@ class Vector2dTest {
 
     @Test
     void subtract() {
-        final Vector2d expected  = new Vector2d(3, 5);
+        final Vector2d expected  = new Vector2d(3, 1);
         final Vector2d actual = vecA.subtract(vecB);
 
         assertEquals(expected, actual);
@@ -64,7 +64,7 @@ class Vector2dTest {
 
     @Test
     void opposite() {
-        final Vector2d expected = new Vector2d(-5, -2);
+        final Vector2d expected = new Vector2d(-1, -2);
         final Vector2d actual = vecA.opposite();
 
         assertEquals(expected, actual);
@@ -72,7 +72,7 @@ class Vector2dTest {
 
     @Test
     void testToString() {
-        final String expected = "(5, 2)";
+        final String expected = "(1, 2)";
         final String actual = vecA.toString();
 
         assertEquals(expected, actual);
@@ -80,7 +80,7 @@ class Vector2dTest {
 
     @Test
     void testEquals() {
-        final Vector2d asserted = new Vector2d(5, 2);
+        final Vector2d asserted = new Vector2d(1, 2);
 
         assertEquals(asserted, vecA);
     }
