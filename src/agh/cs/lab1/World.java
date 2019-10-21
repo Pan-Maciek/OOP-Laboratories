@@ -2,6 +2,7 @@ package agh.cs.lab1;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.Optional;
 
 import static java.lang.System.out;
 
@@ -11,7 +12,8 @@ public class World {
         out.println("Start");
         Direction[] directions = Arrays.stream(args)
                 .map(Direction::parse)
-                .filter(Objects::nonNull)
+                .filter(Optional::isPresent)
+                .map(Optional::get)
                 .toArray(Direction[]::new);
         run(directions);
         out.println("Stop");

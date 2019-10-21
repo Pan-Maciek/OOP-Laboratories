@@ -1,16 +1,18 @@
 package agh.cs.lab1;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Optional;
 
 public enum Direction {
     FORWARD, BACKWARD, RIGHT, LEFT;
 
-    private  static Map<String, Direction> stringToDirection = new HashMap<String, Direction>(){{
-        put("l", LEFT); put("r", RIGHT);
-        put("f", FORWARD); put("b", BACKWARD);
-    }};
-
-    public static Direction parse(String direction) { return stringToDirection.getOrDefault(direction, null); }
+    public static Optional<Direction> parse(String direction){
+        switch (direction) {
+            case "l": return Optional.of(LEFT);
+            case "r": return Optional.of(RIGHT);
+            case "f": return Optional.of(FORWARD);
+            case "b": return Optional.of(BACKWARD);
+            default: return Optional.empty();
+        }
+    }
 }
 
