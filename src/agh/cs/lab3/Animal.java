@@ -26,4 +26,7 @@ public class Animal {
                 break;
         }
     }
+
+    public MapDirection getDirection() { return direction; }
+    public Vector2d getPosition() { return position; }
 }
