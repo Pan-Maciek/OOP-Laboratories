@@ -3,6 +3,7 @@ import agh.cs.lab2.MoveDirection;
 import agh.cs.lab2.Vector2d;
 import agh.cs.lab3.Animal;
 import agh.cs.lab3.OptionsParser;
+import agh.cs.lab4.RectangularMap;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -15,7 +16,8 @@ public class AnimalTest {
 
     @BeforeEach
     void setup() {
-        dog = new Animal();
+        RectangularMap map = new RectangularMap(4,4);
+        dog = new Animal(map);
     }
 
     @Test
