@@ -6,13 +6,13 @@ public enum Direction {
     FORWARD, BACKWARD, RIGHT, LEFT;
 
     public static Optional<Direction> parse(String direction){
-        switch (direction) {
-            case "l": return Optional.of(LEFT);
-            case "r": return Optional.of(RIGHT);
-            case "f": return Optional.of(FORWARD);
-            case "b": return Optional.of(BACKWARD);
-            default: return Optional.empty();
-        }
+        return switch (direction) {
+            case "l" -> Optional.of(LEFT);
+            case "r" -> Optional.of(RIGHT);
+            case "f" -> Optional.of(FORWARD);
+            case "b" -> Optional.of(BACKWARD);
+            default -> Optional.empty();
+        };
     }
 }
 

@@ -30,7 +30,7 @@ public class Animal {
             case RIGHT: direction = direction.next(); break;
             case FORWARD:
             case BACKWARD:
-                Vector2d tmp = dir == MoveDirection.FORWARD ? position.add(direction.unitVector) : position.subtract(direction.unitVector);
+                var tmp = dir == MoveDirection.FORWARD ? position.add(direction.unitVector) : position.subtract(direction.unitVector);
                 if (map.canMoveTo(tmp))
                     position = tmp;
                 break;

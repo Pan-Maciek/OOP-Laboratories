@@ -23,7 +23,7 @@ public class Vector2d {
     public boolean equals(Object obj) {
         if (!(obj instanceof Vector2d)) return false;
         if (obj == this) return true;
-        Vector2d other = (Vector2d) obj;
+        var other = (Vector2d) obj;
         return x == other.x && y == other.y;
     }
 
