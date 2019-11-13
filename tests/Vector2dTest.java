@@ -31,22 +31,6 @@ class Vector2dTest {
     }
 
     @Test
-    void upperRight() {
-        final Vector2d expected  = new Vector2d(1, 2);
-        final Vector2d actual = vecA.upperRight(vecB);
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void lowerLeft() {
-        final Vector2d expected  = new Vector2d(-2, 1);
-        final Vector2d actual = vecA.lowerLeft(vecB);
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
     void add() {
         final Vector2d expected  = new Vector2d(-1, 3);
         final Vector2d actual = vecA.add(vecB);
