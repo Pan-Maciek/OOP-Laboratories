@@ -27,26 +27,26 @@ public class MapVisualizer {
      * indices of the map will have no more than two characters (including the
      * sign).
      *
-     * @param lowerLeft  The lower left corner of the region that is drawn.
-     * @param upperRight The upper right corner of the region that is drawn.
+     * @param upperLeft  The lower left corner of the region that is drawn.
+     * @param lowerRight The upper right corner of the region that is drawn.
      * @return String representation of the selected region of the map.
      */
-    public String draw(Vector2d lowerLeft, Vector2d upperRight) {
+    public String draw(Vector2d upperLeft, Vector2d lowerRight) {
         StringBuilder builder = new StringBuilder();
-        for (int i = upperRight.y + 1; i >= lowerLeft.y - 1; i--) {
-            if (i == upperRight.y + 1) {
-                builder.append(drawHeader(lowerLeft, upperRight));
+        for (int i = upperLeft.y + 1; i >= lowerRight.y - 1; i--) {
+            if (i == upperLeft.y + 1) {
+                builder.append(drawHeader(upperLeft, lowerRight));
             }
             builder.append(String.format("%3d: ", i));
-            for (int j = lowerLeft.x; j <= upperRight.x + 1; j++) {
-                if (i < lowerLeft.y || i > upperRight.y) {
-                    builder.append(drawFrame(j <= upperRight.x));
-                } else {
-                    builder.append(CELL_SEGMENT);
-                    if (j <= upperRight.x) {
+            for (int j = upperLeft.x; j <= lowerRight.x + 1; j++) {
+//                if (i < upperLeft.y || i > lowerRight.y) {
+//                    builder.append(drawFrame(j <= lowerRight.x));
+//                } else {
+//                    builder.append(CELL_SEGMENT);
+//                    if (j <= lowerRight.x) {
                         builder.append(drawObject(new Vector2d(j, i)));
-                    }
-                }
+//                    }
+//                }
             }
             builder.append(System.lineSeparator());
         }

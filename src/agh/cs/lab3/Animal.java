@@ -4,25 +4,21 @@ import agh.cs.lab2.MapDirection;
 import agh.cs.lab2.MoveDirection;
 import agh.cs.lab2.Vector2d;
 import agh.cs.lab4.IWorldMap;
+import agh.cs.lab5.AbstractMapElement;
 
-public class Animal {
+public class Animal extends AbstractMapElement {
     private MapDirection direction = MapDirection.NORTH;
-    private Vector2d position = new Vector2d(2,2);
     private IWorldMap map;
 
-    public Animal(IWorldMap map) {
-        this.map = map;
-    }
+    public Animal(IWorldMap map) { this(map, new Vector2d(2,2)); }
 
     public Animal(IWorldMap map, Vector2d initialPosition) {
+        super(initialPosition);
         this.map = map;
-        this.position = initialPosition;
     }
 
     @Override
-    public String toString() {
-        return position.toString() + " " + direction.arrow;
-    }
+    public String toString() { return Character.toString(direction.arrow); }
 
     public void move(MoveDirection dir) {
         switch (dir) {
@@ -30,9 +26,9 @@ public class Animal {
             case RIGHT: direction = direction.next(); break;
             case FORWARD:
             case BACKWARD:
-                var tmp = dir == MoveDirection.FORWARD ? position.add(direction.unitVector) : position.subtract(direction.unitVector);
-                if (map.canMoveTo(tmp))
-                    position = tmp;
+                var newPos = dir == MoveDirection.FORWARD ? position.add(direction.unitVector) : position.subtract(direction.unitVector);
+                if (map.canMoveTo(newPos))
+                    position = newPos;
                 break;
             default: throw new IllegalArgumentException("weź sie człowieku zastanów");
         }
