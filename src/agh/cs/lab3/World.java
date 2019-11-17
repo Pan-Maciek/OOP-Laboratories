@@ -16,13 +16,17 @@ import static java.lang.System.out;
 public class World {
     static IWorldMap map = new GrassField(5);
     public static void main(String[] args) {
-        var dogo = new Animal(map);
-        var gato = new Animal(map, new Vector2d(3, 4));
-        map.place(dogo);
-        map.place(gato);
-        var moves = OptionsParser.parse(args);
-        map.run(moves);
-        map.place(new Animal(map, new Vector2d(0,0)));
-        out.println(map);
+        try {
+            var dogo = new Animal(map);
+            var gato = new Animal(map, new Vector2d(3, 4));
+            map.place(dogo);
+            map.place(gato);
+            var moves = OptionsParser.parse(args);
+            map.run(moves);
+            map.place(new Animal(map, new Vector2d(0,0)));
+            out.println(map);
+        } catch (IllegalArgumentException e) {
+            System.err.println(e);
+        }
     }
 }

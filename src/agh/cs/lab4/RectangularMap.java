@@ -1,12 +1,10 @@
 package agh.cs.lab4;
 
 import agh.cs.lab2.Vector2d;
-import agh.cs.lab3.Animal;
 import agh.cs.lab5.AbstractMap;
 import agh.cs.lab5.AbstractMapElement;
-import agh.cs.lab5.Grass;
 
-public class RectangularMap<List> extends AbstractMap {
+public class RectangularMap extends AbstractMap {
     private final Vector2d upperBoundary, lowerBoundary;
 
     public RectangularMap(int width, int height) {
@@ -17,9 +15,7 @@ public class RectangularMap<List> extends AbstractMap {
 
     @Override
     public boolean place(AbstractMapElement element) {
-        var pos = element.getPosition();
-        if (element instanceof Animal && canMoveTo(pos)) return super.place(element);
-        if (!checkBounds(pos) || isOccupied(pos)) return false;
+        if (!checkBounds(element.getPosition())) throw new IllegalArgumentException("");
         return super.place(element);
     }
 
@@ -29,7 +25,7 @@ public class RectangularMap<List> extends AbstractMap {
 
     @Override
     public boolean canMoveTo(Vector2d position) {
-        return checkBounds(position) && (!isOccupied(position) || (objectAt(position) instanceof Grass));
+        return checkBounds(position) && super.canMoveTo(position);
     }
 
     @Override

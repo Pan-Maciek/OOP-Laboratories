@@ -42,10 +42,10 @@ public class MapVisualizer {
 //                if (i < upperLeft.y || i > lowerRight.y) {
 //                    builder.append(drawFrame(j <= lowerRight.x));
 //                } else {
-//                    builder.append(CELL_SEGMENT);
-//                    if (j <= lowerRight.x) {
+                    builder.append(CELL_SEGMENT);
+                    if (j <= lowerRight.x) {
                         builder.append(drawObject(new Vector2d(j, i)));
-//                    }
+                    }
 //                }
             }
             builder.append(System.lineSeparator());

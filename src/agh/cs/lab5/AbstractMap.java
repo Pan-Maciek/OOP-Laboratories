@@ -15,26 +15,35 @@ public abstract class AbstractMap implements IWorldMap {
     protected final Map<Vector2d, AbstractMapElement> map;
     protected final List<Animal> animals;
     protected final MapVisualizer mapVisualizer;
-    private Vector2d bottomRight, topLeft;
+    protected Vector2d topRight, bottomLeft;
 
     public AbstractMap() {
         this.map = new HashMap<>();
         this.animals = new ArrayList<>();
         this.mapVisualizer = new MapVisualizer(this);
-        bottomRight = new Vector2d(5, 5);
-        topLeft = new Vector2d(0, 0);
+        topRight = new Vector2d(5, 5);
+        bottomLeft = new Vector2d(0, 0);
     }
 
     private void updateBounds(Vector2d pos) {
-        bottomRight = bottomRight.lowerRight(pos);
-        topLeft = topLeft.upperLeft(pos);
+        topRight = topRight.lowerRight(pos);
+        bottomLeft = bottomLeft.upperLeft(pos);
     }
 
     @Override
     public boolean place(AbstractMapElement element) {
         var pos = element.getPosition();
+        if (element instanceof Animal) {
+            if (canMoveTo(pos)) {
+                animals.add((Animal) element);
+                map.put(pos, element);
+                updateBounds(pos);
+                return true;
+            } else throw new IllegalArgumentException("trying to place object at: " + pos + ". Position already occupied.");
+        }
+        if (isOccupied(pos))
+            throw new IllegalArgumentException("trying to place object at: " + pos + ". Position already occupied.");
         map.put(pos, element);
-        if (element instanceof Animal) animals.add((Animal) element);
         updateBounds(pos);
         return true;
     }
@@ -61,7 +70,10 @@ public abstract class AbstractMap implements IWorldMap {
     public AbstractMapElement objectAt(Vector2d position) { return map.get(position); }
 
     @Override
+    public boolean canMoveTo(Vector2d position) { return !isOccupied(position) || (objectAt(position) instanceof Grass); }
+
+    @Override
     public String toString() {
-        return mapVisualizer.draw(topLeft, bottomRight);
+        return mapVisualizer.draw(bottomLeft, topRight);
     }
 }

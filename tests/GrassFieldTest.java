@@ -33,7 +33,7 @@ public class GrassFieldTest {
         var animal3 = new Animal(map, new Vector2d(1, 1));
         map.place(grass);
         assertTrue(map.place(animal1));
-        assertFalse(map.place(animal2));
+        assertThrows(IllegalArgumentException.class, () -> map.place(animal2));
         assertTrue(map.place(animal3));
     }
 
@@ -44,7 +44,6 @@ public class GrassFieldTest {
         assertFalse(map.isOccupied(position));
         map.place(animal);
         assertFalse(map.isOccupied(new Vector2d(10, 10)));
-        map.place(animal);
         assertTrue(map.isOccupied(position));
         var md = OptionsParser.parse(new String[]{"f", "f"});
         map.run(md);

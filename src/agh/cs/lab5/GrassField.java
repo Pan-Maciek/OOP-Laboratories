@@ -22,19 +22,12 @@ public class GrassField extends AbstractMap {
             var succeeded = false;
             do {
                 var position = new Vector2d(random.nextInt(max), random.nextInt(max));
-                succeeded = place(new Grass(position));
+                try {
+                    succeeded = place(new Grass(position));
+                } catch (IllegalArgumentException e) {
+                    succeeded = false;
+                }
             } while(!succeeded);
         }
     }
-
-    @Override
-    public boolean place(AbstractMapElement element) {
-        var pos = element.getPosition();
-        if (element instanceof Animal && canMoveTo(pos)) return super.place(element);
-        if (isOccupied(pos)) return false;
-        return super.place(element);
-    }
-
-    @Override
-    public boolean canMoveTo(Vector2d position) { return !isOccupied(position) || (objectAt(position) instanceof Grass); }
 }

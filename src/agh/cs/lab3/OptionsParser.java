@@ -10,8 +10,6 @@ public class OptionsParser {
     public static MoveDirection[] parse(String[] args) {
         return Arrays.stream(args)
                 .map(MoveDirection::parse)
-                .filter(Optional::isPresent)
-                .map(Optional::get)
                 .toArray(MoveDirection[]::new);
     }
 }

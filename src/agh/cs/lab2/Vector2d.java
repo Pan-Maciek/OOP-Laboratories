@@ -28,5 +28,10 @@ public class Vector2d {
     }
 
     @Override
-    public int hashCode() { return x * y; }
+    public int hashCode() {
+        int hash = 13;
+        hash += this.x * 31;
+        hash += this.y * 17;
+        return hash;
+    }
 }

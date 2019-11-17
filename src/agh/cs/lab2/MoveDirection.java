@@ -4,13 +4,13 @@ import java.util.Optional;
 
 public enum  MoveDirection {
     FORWARD, BACKWARD, RIGHT, LEFT;
-    public static Optional<MoveDirection> parse(String s) {
+    public static MoveDirection parse(String s) {
         return switch (s) {
-            case "f" -> Optional.of(FORWARD);
-            case "b" -> Optional.of(BACKWARD);
-            case "r" -> Optional.of(RIGHT);
-            case "l" -> Optional.of(LEFT);
-            default -> Optional.empty();
+            case "f" -> FORWARD;
+            case "b" -> BACKWARD;
+            case "r" -> RIGHT;
+            case "l" -> LEFT;
+            default -> throw new IllegalArgumentException(s + "is not legal move specification");
         };
     }
 }
