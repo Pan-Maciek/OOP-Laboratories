@@ -1,4 +1,4 @@
-package agh.cs.lab2;
+package agh.cs.math;
 import static java.lang.Math.*;
 
 public class Vector2d {

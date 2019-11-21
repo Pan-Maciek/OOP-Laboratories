@@ -1,19 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99d33c9c-94f3-43cb-9e65-1625c78a675e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/agh/cs/lab7/IPositionChange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agh/cs/lab7/MapBoundary.java" afterDir="false" />
+    <list default="true" id="99d33c9c-94f3-43cb-9e65-1625c78a675e" name="Default Changelist" comment="Lab 7">
+      <change afterPath="$PROJECT_DIR$/src/agh/cs/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/agh/cs/map/MapDirection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/agh/cs/map/World.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/agh/cs/map/WorldRenderer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/agh/cs/map/entities/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/agh/cs/map/entities/Grass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/agh/cs/map/entities/abstractions/DynamicObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/agh/cs/map/entities/abstractions/ICollide.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/agh/cs/map/entities/abstractions/IMovable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/agh/cs/map/entities/abstractions/StaticObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab3/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab3/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab3/OptionsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab3/OptionsParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab3/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab3/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab4/IWorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab4/IWorldMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab4/RectangularMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab4/RectangularMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab5/AbstractMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab5/AbstractMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab5/GrassField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab5/GrassField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/GrassFieldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/GrassFieldTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/RectangularMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/RectangularMapTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab1/Direction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab1/World.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab2/MapDirection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab2/MoveDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/map/entities/abstractions/MoveDirection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab2/Vector2d.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/math/Vector2d.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab2/World.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab3/Animal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab3/OptionsParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab3/World.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab4/IWorldMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab4/MapVisualizer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab4/RectangularMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab5/AbstractMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab5/AbstractMapElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab5/Grass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab5/GrassField.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab7/IPositionChange.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab7/MapBoundary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/AnimalTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/GrassFieldTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/MapDirectionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/RectangularMapTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Vector2dTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/WorldTest.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +99,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RectangularMapTest">
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="agh.cs.Application" />
+      <module name="labs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="agh.cs.map.entities.abstractions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="agh.cs.lab3.World" />
       <module name="labs" />
@@ -86,16 +122,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GrassFieldTest.isOccupied" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="labs" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GrassFieldTest" />
-      <option name="METHOD_NAME" value="isOccupied" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -131,18 +157,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.World" />
-      <item itemvalue="JUnit.GrassFieldTest.isOccupied" />
       <item itemvalue="JUnit.RectangularMapTest" />
       <item itemvalue="JUnit.GrassFieldTest.objectAt" />
       <item itemvalue="JUnit.RectangularMapTest.place" />
+      <item itemvalue="Application.Application" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.World" />
         <item itemvalue="JUnit.RectangularMapTest" />
         <item itemvalue="JUnit.RectangularMapTest.place" />
-        <item itemvalue="Application.World" />
         <item itemvalue="JUnit.GrassFieldTest.objectAt" />
-        <item itemvalue="JUnit.GrassFieldTest.isOccupied" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574030705322</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Lab 7">
+      <created>1574340704453</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1574340704453</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -231,7 +264,8 @@
     <MESSAGE value="tests" />
     <MESSAGE value="World abstractions" />
     <MESSAGE value="Lab 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lab 5" />
+    <MESSAGE value="Lab 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab 7" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

@@ -1,10 +1,8 @@
-package agh.cs.lab2;
-
-import java.util.Optional;
+package agh.cs.map.entities.abstractions;
 
 public enum  MoveDirection {
     FORWARD, BACKWARD, RIGHT, LEFT;
-    public static MoveDirection parse(String s) {
+    public static MoveDirection parse(String s) throws IllegalArgumentException {
         return switch (s) {
             case "f" -> FORWARD;
             case "b" -> BACKWARD;
