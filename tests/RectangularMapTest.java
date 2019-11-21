@@ -32,12 +32,12 @@ public class RectangularMapTest {
         var animal1 = new Animal(map, new Vector2d(0, 0));
         var animal2 = new Animal(map, new Vector2d(0, 0));
         var animal3 = new Animal(map, new Vector2d(1, 1));
-        assertTrue(map.place(grass));
-        assertTrue(map.place(animal1));
-        assertFalse(map.place(animal2));
-        assertTrue(map.place(animal3));
+        assertDoesNotThrow(() -> map.place(grass));
+        assertDoesNotThrow(() -> map.place(animal1));
+        assertThrows(RuntimeException.class, () -> map.place(animal2));
+        assertDoesNotThrow(() -> map.place(animal3));
         var animal4 = new Animal(map, new Vector2d(111, 111));
-        assertFalse(map.place(animal4));
+        assertThrows(RuntimeException.class, () -> map.place(animal4));
     }
 
     @Test

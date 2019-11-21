@@ -1,6 +1,7 @@
 package agh.cs.lab4;
 
 import agh.cs.lab2.Vector2d;
+import agh.cs.lab3.Animal;
 import agh.cs.lab5.AbstractMap;
 import agh.cs.lab5.AbstractMapElement;
 
@@ -13,10 +14,15 @@ public class RectangularMap extends AbstractMap {
         this.upperBoundary = new Vector2d(width, height);
     }
 
+    public void place(Animal animal) {
+        if (!checkBounds(animal.getPosition())) throw new IllegalArgumentException("Trying to place element outside the boundary");
+        super.place(animal);
+    }
+
     @Override
-    public boolean place(AbstractMapElement element) {
-        if (!checkBounds(element.getPosition())) throw new IllegalArgumentException("");
-        return super.place(element);
+    public void place(AbstractMapElement element) {
+        if (!checkBounds(element.getPosition())) throw new IllegalArgumentException("Trying to place element outside the boundary");
+        super.place(element);
     }
 
     private boolean checkBounds(Vector2d position) {

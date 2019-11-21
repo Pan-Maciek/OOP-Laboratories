@@ -27,6 +27,7 @@ public class World {
             out.println(map);
         } catch (IllegalArgumentException e) {
             System.err.println(e);
+            System.exit(1);
         }
     }
 }

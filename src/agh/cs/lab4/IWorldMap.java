@@ -2,6 +2,7 @@ package agh.cs.lab4;
 
 import agh.cs.lab2.MoveDirection;
 import agh.cs.lab2.Vector2d;
+import agh.cs.lab3.Animal;
 import agh.cs.lab5.AbstractMapElement;
 
 /**
@@ -27,7 +28,8 @@ public interface IWorldMap {
      * @param element The element to place on the map.
      * @return True if the animal was placed. The animal cannot be placed if the map is already occupied.
      */
-    boolean place(AbstractMapElement element);
+    void place(AbstractMapElement element);
+    void place(Animal animal);
 
     /**
      * Move the animal on the map according to the provided move directions. Every

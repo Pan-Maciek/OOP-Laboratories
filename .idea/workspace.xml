@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99d33c9c-94f3-43cb-9e65-1625c78a675e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/agh/cs/lab7/IPositionChange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/agh/cs/lab7/MapBoundary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab2/MoveDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab2/MoveDirection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab2/Vector2d.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab2/Vector2d.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab3/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab3/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agh/cs/lab3/OptionsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab3/OptionsParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agh/cs/lab3/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab3/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab4/MapVisualizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab4/MapVisualizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab4/IWorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab4/IWorldMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agh/cs/lab4/RectangularMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab4/RectangularMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agh/cs/lab5/AbstractMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab5/AbstractMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agh/cs/lab5/GrassField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab5/GrassField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/GrassFieldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/GrassFieldTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/RectangularMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/RectangularMapTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +76,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.World">
+  <component name="RunManager" selected="JUnit.RectangularMapTest">
     <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="agh.cs.lab3.World" />
       <module name="labs" />
@@ -108,16 +110,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GrassFieldTest.place" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="labs" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GrassFieldTest" />
-      <option name="METHOD_NAME" value="place" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RectangularMapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="labs" />
       <option name="PACKAGE_NAME" value="" />
@@ -127,20 +119,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RectangularMapTest.place" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="labs" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RectangularMapTest" />
+      <option name="METHOD_NAME" value="place" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.World" />
-      <item itemvalue="JUnit.GrassFieldTest.place" />
       <item itemvalue="JUnit.GrassFieldTest.isOccupied" />
       <item itemvalue="JUnit.RectangularMapTest" />
       <item itemvalue="JUnit.GrassFieldTest.objectAt" />
+      <item itemvalue="JUnit.RectangularMapTest.place" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RectangularMapTest" />
+        <item itemvalue="JUnit.RectangularMapTest.place" />
         <item itemvalue="Application.World" />
         <item itemvalue="JUnit.GrassFieldTest.objectAt" />
         <item itemvalue="JUnit.GrassFieldTest.isOccupied" />
-        <item itemvalue="JUnit.GrassFieldTest.place" />
-        <item itemvalue="JUnit.RectangularMapTest" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573686665091</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Lab 5">
+      <created>1574030705322</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1574030705322</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -221,7 +230,8 @@
     <MESSAGE value="standardized coordinates" />
     <MESSAGE value="tests" />
     <MESSAGE value="World abstractions" />
-    <option name="LAST_COMMIT_MESSAGE" value="World abstractions" />
+    <MESSAGE value="Lab 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab 5" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -229,6 +239,10 @@
         <watch expression="lowerBoundary" language="JAVA" />
         <watch expression="upperBoundary" language="JAVA" />
         <watch expression="canMoveTo(pos)" language="JAVA" />
+      </configuration>
+      <configuration name="Application">
+        <watch expression="mapBoundary.getBottomLeft()" language="JAVA" />
+        <watch expression="mapBoundary.getTopRight()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

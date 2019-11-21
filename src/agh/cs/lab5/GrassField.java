@@ -23,7 +23,8 @@ public class GrassField extends AbstractMap {
             do {
                 var position = new Vector2d(random.nextInt(max), random.nextInt(max));
                 try {
-                    succeeded = place(new Grass(position));
+                    place(new Grass(position));
+                    succeeded = true;
                 } catch (IllegalArgumentException e) {
                     succeeded = false;
                 }

@@ -32,9 +32,9 @@ public class GrassFieldTest {
         var animal2 = new Animal(map, new Vector2d(0, 0));
         var animal3 = new Animal(map, new Vector2d(1, 1));
         map.place(grass);
-        assertTrue(map.place(animal1));
+        assertDoesNotThrow(() -> map.place(animal1));
         assertThrows(IllegalArgumentException.class, () -> map.place(animal2));
-        assertTrue(map.place(animal3));
+        assertDoesNotThrow(() -> map.place(animal3));
     }
 
     @Test

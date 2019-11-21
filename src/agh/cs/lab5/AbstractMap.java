@@ -5,61 +5,60 @@ import agh.cs.lab2.Vector2d;
 import agh.cs.lab3.Animal;
 import agh.cs.lab4.IWorldMap;
 import agh.cs.lab4.MapVisualizer;
+import agh.cs.lab7.IPositionChange;
+import agh.cs.lab7.MapBoundary;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public abstract class AbstractMap implements IWorldMap {
+public abstract class AbstractMap implements IWorldMap, IPositionChange.Observer {
     protected final Map<Vector2d, AbstractMapElement> map;
     protected final List<Animal> animals;
     protected final MapVisualizer mapVisualizer;
-    protected Vector2d topRight, bottomLeft;
+    private MapBoundary mapBoundary;
 
     public AbstractMap() {
         this.map = new HashMap<>();
         this.animals = new ArrayList<>();
         this.mapVisualizer = new MapVisualizer(this);
-        topRight = new Vector2d(5, 5);
-        bottomLeft = new Vector2d(0, 0);
-    }
-
-    private void updateBounds(Vector2d pos) {
-        topRight = topRight.lowerRight(pos);
-        bottomLeft = bottomLeft.upperLeft(pos);
+        mapBoundary = new MapBoundary();
     }
 
     @Override
-    public boolean place(AbstractMapElement element) {
+    public void positionChanged(Vector2d oldPosition, Vector2d newPosition) {
+        var obj = this.objectAt(oldPosition);
+        map.remove(oldPosition);
+        map.put(newPosition, obj);
+    }
+
+    @Override
+    public void initialPosition(Vector2d position) { }
+
+    public void place(Animal animal) throws IllegalArgumentException {
+        var pos = animal.getPosition();
+        if (canMoveTo(pos)) {
+            animals.add(animal);
+            map.put(pos, animal);
+            animal.subscribe(this);
+            animal.subscribe(mapBoundary);
+        } else throw new IllegalArgumentException("trying to place object at: " + pos + ". Position already occupied.");
+    }
+
+    @Override
+    public void place(AbstractMapElement element) throws IllegalArgumentException {
         var pos = element.getPosition();
-        if (element instanceof Animal) {
-            if (canMoveTo(pos)) {
-                animals.add((Animal) element);
-                map.put(pos, element);
-                updateBounds(pos);
-                return true;
-            } else throw new IllegalArgumentException("trying to place object at: " + pos + ". Position already occupied.");
-        }
-        if (isOccupied(pos))
-            throw new IllegalArgumentException("trying to place object at: " + pos + ". Position already occupied.");
+        if (isOccupied(pos)) throw new IllegalArgumentException("trying to place object at: " + pos + ". Position already occupied.");
         map.put(pos, element);
-        updateBounds(pos);
-        return true;
     }
 
     @Override
     public void run(MoveDirection[] directions) {
         for (int size = animals.size(), i = 0; i < directions.length; i++) {
             var animal = animals.get(i % size);
-            var prevPos = animal.getPosition();
             animal.move(directions[i]);
-
-            var currentPos = animal.getPosition();
-            if (!prevPos.equals(currentPos)) {
-                map.remove(prevPos);
-                map.put(currentPos, animal);
-            }
         }
     }
 
@@ -74,6 +73,6 @@ public abstract class AbstractMap implements IWorldMap {
 
     @Override
     public String toString() {
-        return mapVisualizer.draw(bottomLeft, topRight);
+        return mapVisualizer.draw(mapBoundary.getUpperLeft(), mapBoundary.getLowerRight());
     }
 }

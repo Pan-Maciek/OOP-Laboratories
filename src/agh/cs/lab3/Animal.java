@@ -4,9 +4,9 @@ import agh.cs.lab2.MapDirection;
 import agh.cs.lab2.MoveDirection;
 import agh.cs.lab2.Vector2d;
 import agh.cs.lab4.IWorldMap;
-import agh.cs.lab5.AbstractMapElement;
+import agh.cs.lab7.IPositionChange;
 
-public class Animal extends AbstractMapElement {
+public class Animal extends IPositionChange.Observable {
     private MapDirection direction = MapDirection.NORTH;
     private IWorldMap map;
 
@@ -27,8 +27,7 @@ public class Animal extends AbstractMapElement {
             case FORWARD:
             case BACKWARD:
                 var newPos = dir == MoveDirection.FORWARD ? position.add(direction.unitVector) : position.subtract(direction.unitVector);
-                if (map.canMoveTo(newPos))
-                    position = newPos;
+                if (map.canMoveTo(newPos)) setPosition(newPos);
                 break;
             default: throw new IllegalArgumentException("weź sie człowieku zastanów");
         }
