@@ -6,9 +6,7 @@ import agh.cs.lab3.Animal;
 import agh.cs.lab4.IWorldMap;
 import agh.cs.lab4.MapVisualizer;
 import agh.cs.lab7.IPositionChange;
-import agh.cs.lab7.MapBoundary;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -16,15 +14,13 @@ import java.util.Map;
 
 public abstract class AbstractMap implements IWorldMap, IPositionChange.Observer {
     protected final Map<Vector2d, AbstractMapElement> map;
-    protected final List<Animal> animals;
+    private final List<Animal> animals;
     protected final MapVisualizer mapVisualizer;
-    private MapBoundary mapBoundary;
 
     public AbstractMap() {
         this.map = new HashMap<>();
         this.animals = new ArrayList<>();
         this.mapVisualizer = new MapVisualizer(this);
-        mapBoundary = new MapBoundary();
     }
 
     @Override
@@ -43,7 +39,6 @@ public abstract class AbstractMap implements IWorldMap, IPositionChange.Observer
             animals.add(animal);
             map.put(pos, animal);
             animal.subscribe(this);
-            animal.subscribe(mapBoundary);
         } else throw new IllegalArgumentException("trying to place object at: " + pos + ". Position already occupied.");
     }
 
@@ -70,9 +65,4 @@ public abstract class AbstractMap implements IWorldMap, IPositionChange.Observer
 
     @Override
     public boolean canMoveTo(Vector2d position) { return !isOccupied(position) || (objectAt(position) instanceof Grass); }
-
-    @Override
-    public String toString() {
-        return mapVisualizer.draw(mapBoundary.getUpperLeft(), mapBoundary.getLowerRight());
-    }
 }

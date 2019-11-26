@@ -6,7 +6,7 @@ import agh.cs.lab2.Vector2d;
 import agh.cs.lab4.IWorldMap;
 import agh.cs.lab7.IPositionChange;
 
-public class Animal extends IPositionChange.Observable {
+public class Animal extends IPositionChange.EventEmitter {
     private MapDirection direction = MapDirection.NORTH;
     private IWorldMap map;
 
@@ -22,14 +22,13 @@ public class Animal extends IPositionChange.Observable {
 
     public void move(MoveDirection dir) {
         switch (dir) {
-            case LEFT: direction = direction.previous(); break;
-            case RIGHT: direction = direction.next(); break;
-            case FORWARD:
-            case BACKWARD:
+            case LEFT -> direction = direction.previous();
+            case RIGHT -> direction = direction.next();
+            case FORWARD, BACKWARD -> {
                 var newPos = dir == MoveDirection.FORWARD ? position.add(direction.unitVector) : position.subtract(direction.unitVector);
                 if (map.canMoveTo(newPos)) setPosition(newPos);
-                break;
-            default: throw new IllegalArgumentException("weź sie człowieku zastanów");
+            }
+            default -> throw new IllegalArgumentException("Invalid MoveDirection value passed to move().");
         }
     }
 

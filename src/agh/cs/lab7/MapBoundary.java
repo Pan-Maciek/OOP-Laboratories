@@ -24,19 +24,8 @@ public class MapBoundary implements IPositionChange.Observer {
         yPositions.add(position.y);
     }
 
-    public Vector2d getTopRight() {
-        return new Vector2d(xPositions.last(), yPositions.last());
-    }
-
-    public Vector2d getBottomLeft() {
-        return new Vector2d(xPositions.first(), yPositions.first());
-    }
-
-    public Vector2d getUpperLeft() {
-        return new Vector2d(xPositions.first(), yPositions.last());
-    }
-
-    public Vector2d getLowerRight() {
-        return new Vector2d(xPositions.last(), yPositions.first());
-    }
+    public Vector2d getTopRight() { return new Vector2d(xPositions.last(), yPositions.last()); }
+    public Vector2d getBottomLeft() { return new Vector2d(xPositions.first(), yPositions.first()); }
+    public Vector2d getUpperLeft() { return new Vector2d(xPositions.first(), yPositions.last()); }
+    public Vector2d getLowerRight() { return new Vector2d(xPositions.last(), yPositions.first()); }
 }

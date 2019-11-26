@@ -3,7 +3,6 @@ import agh.cs.lab3.Animal;
 import agh.cs.lab3.OptionsParser;
 import agh.cs.lab4.RectangularMap;
 import agh.cs.lab5.Grass;
-import agh.cs.lab5.GrassField;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -21,7 +20,7 @@ public class RectangularMapTest {
     @Test
     void canMoveTo(){
         var animal = new Animal(map, new Vector2d(-4, -5));
-        map.place(animal);
+        assertThrows(RuntimeException.class, () -> map.place(animal));
         assertFalse(map.canMoveTo(animal.getPosition()));
         assertTrue(map.canMoveTo(new Vector2d(0, 0)));
     }
@@ -47,7 +46,7 @@ public class RectangularMapTest {
         assertFalse(map.isOccupied(position));
         map.place(animal);
         assertFalse(map.isOccupied(new Vector2d(10, 10)));
-        map.place(animal);
+        assertThrows(RuntimeException.class, () -> map.place(animal));
         assertTrue(map.isOccupied(position));
         var md = OptionsParser.parse(new String[]{"f", "f"});
         map.run(md);

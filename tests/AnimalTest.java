@@ -7,11 +7,9 @@ import agh.cs.lab4.RectangularMap;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-public class AnimalTest {
+class AnimalTest {
     Animal dog;
 
     @BeforeEach
@@ -78,8 +76,14 @@ public class AnimalTest {
     @Test
     void inputCheck() {
         String[] args = { "l", "r", "f", "b", "x", "d" };
+        assertThrows(RuntimeException.class, () -> OptionsParser.parse(args));
+    }
+
+    @Test
+    void inputCheck2() {
+        String[] args = { "l", "r", "f", "b" };
         MoveDirection[] expected = { MoveDirection.LEFT, MoveDirection.RIGHT, MoveDirection.FORWARD, MoveDirection.BACKWARD };
         MoveDirection[] actual = OptionsParser.parse(args);
-        assertTrue(Arrays.equals(actual, expected));
+        assertArrayEquals(actual, expected);
     }
 }

@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99d33c9c-94f3-43cb-9e65-1625c78a675e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/agh/cs/lab7/IPositionChange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agh/cs/lab7/MapBoundary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agh/cs/lab3/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab3/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab3/OptionsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab3/OptionsParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab3/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab3/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab4/IWorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab4/IWorldMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab4/RectangularMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab4/RectangularMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agh/cs/lab5/AbstractMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab5/AbstractMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/agh/cs/lab5/GrassField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab5/GrassField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab7/IPositionChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab7/IPositionChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab7/MapBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/lab7/MapBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/AnimalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/AnimalTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/GrassFieldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/GrassFieldTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/RectangularMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/RectangularMapTest.java" afterDir="false" />
     </list>
@@ -76,10 +73,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RectangularMapTest">
+  <component name="RunManager" selected="Application.World">
     <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="agh.cs.lab3.World" />
       <module name="labs" />
+      <option name="PROGRAM_PARAMETERS" value="l f f f f f f l f l f l f l f l f l f l f l f f f f l f l f" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="agh.cs.lab3.*" />
@@ -90,40 +88,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GrassFieldTest.isOccupied" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AnimalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="labs" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GrassFieldTest" />
-      <option name="METHOD_NAME" value="isOccupied" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GrassFieldTest.objectAt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="labs" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GrassFieldTest" />
-      <option name="METHOD_NAME" value="objectAt" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RectangularMapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="labs" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RectangularMapTest" />
+      <option name="MAIN_CLASS_NAME" value="AnimalTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RectangularMapTest.place" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AnimalTest.inputCheck2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="labs" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AnimalTest" />
+      <option name="METHOD_NAME" value="inputCheck2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RectangularMapTest.canMoveTo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="labs" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="RectangularMapTest" />
-      <option name="METHOD_NAME" value="place" />
+      <option name="METHOD_NAME" value="canMoveTo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RectangularMapTest.isOccupied" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="labs" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RectangularMapTest" />
+      <option name="METHOD_NAME" value="isOccupied" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -131,18 +129,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.World" />
-      <item itemvalue="JUnit.GrassFieldTest.isOccupied" />
-      <item itemvalue="JUnit.RectangularMapTest" />
-      <item itemvalue="JUnit.GrassFieldTest.objectAt" />
-      <item itemvalue="JUnit.RectangularMapTest.place" />
+      <item itemvalue="JUnit.AnimalTest" />
+      <item itemvalue="JUnit.AnimalTest.inputCheck2" />
+      <item itemvalue="JUnit.RectangularMapTest.isOccupied" />
+      <item itemvalue="JUnit.RectangularMapTest.canMoveTo" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RectangularMapTest" />
-        <item itemvalue="JUnit.RectangularMapTest.place" />
         <item itemvalue="Application.World" />
-        <item itemvalue="JUnit.GrassFieldTest.objectAt" />
-        <item itemvalue="JUnit.GrassFieldTest.isOccupied" />
+        <item itemvalue="JUnit.RectangularMapTest.canMoveTo" />
+        <item itemvalue="JUnit.RectangularMapTest.isOccupied" />
+        <item itemvalue="JUnit.AnimalTest" />
+        <item itemvalue="JUnit.AnimalTest.inputCheck2" />
       </list>
     </recent_temporary>
   </component>
