@@ -1,7 +1,9 @@
 package agh.cs.math;
-import static java.lang.Math.*;
 
-public class Vector2d {
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+
+public class Vector2d implements Comparable {
     public final int x, y;
     public Vector2d(int x, int y) {
         this.x = x;
@@ -33,5 +35,16 @@ public class Vector2d {
         hash += this.x * 31;
         hash += this.y * 17;
         return hash;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if (o instanceof Vector2d) {
+            var other = (Vector2d) o;
+            if (other.precedes(this)) return 1;
+            if (other.follows(this)) return -1;
+            return 0;
+        }
+        return 1;
     }
 }

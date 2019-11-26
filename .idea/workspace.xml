@@ -1,42 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99d33c9c-94f3-43cb-9e65-1625c78a675e" name="Default Changelist" comment="Lab 7">
-      <change afterPath="$PROJECT_DIR$/src/agh/cs/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agh/cs/map/MapDirection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agh/cs/map/World.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agh/cs/map/WorldRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agh/cs/map/entities/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agh/cs/map/entities/Grass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agh/cs/map/entities/abstractions/DynamicObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agh/cs/map/entities/abstractions/ICollide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agh/cs/map/entities/abstractions/IMovable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/agh/cs/map/entities/abstractions/StaticObject.java" afterDir="false" />
+    <list default="true" id="99d33c9c-94f3-43cb-9e65-1625c78a675e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab1/Direction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab1/World.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab2/MapDirection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab2/MoveDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/map/entities/abstractions/MoveDirection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab2/Vector2d.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/math/Vector2d.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab2/World.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab3/Animal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab3/OptionsParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab3/World.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab4/IWorldMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab4/MapVisualizer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab4/RectangularMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab5/AbstractMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab5/AbstractMapElement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab5/Grass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab5/GrassField.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab7/IPositionChange.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/agh/cs/lab7/MapBoundary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/AnimalTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/GrassFieldTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/MapDirectionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/RectangularMapTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Vector2dTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/WorldTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/map/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/map/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/map/WorldRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/map/WorldRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/map/entities/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/map/entities/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/map/entities/Grass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/map/entities/Grass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/map/entities/abstractions/DynamicObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/map/entities/abstractions/DynamicObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/map/entities/abstractions/StaticObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/map/entities/abstractions/StaticObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/agh/cs/math/Vector2d.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/agh/cs/math/Vector2d.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -157,10 +131,10 @@
     </configuration>
     <list>
       <item itemvalue="Application.World" />
+      <item itemvalue="Application.Application" />
       <item itemvalue="JUnit.RectangularMapTest" />
       <item itemvalue="JUnit.GrassFieldTest.objectAt" />
       <item itemvalue="JUnit.RectangularMapTest.place" />
-      <item itemvalue="Application.Application" />
     </list>
     <recent_temporary>
       <list>
@@ -232,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574340704453</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="initial cleanup">
+      <created>1574357641829</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1574357641829</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -265,7 +246,8 @@
     <MESSAGE value="World abstractions" />
     <MESSAGE value="Lab 5" />
     <MESSAGE value="Lab 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lab 7" />
+    <MESSAGE value="initial cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial cleanup" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
